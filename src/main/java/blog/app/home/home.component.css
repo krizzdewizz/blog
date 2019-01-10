@@ -1,0 +1,10 @@
+home {
+	display: block;
+}
+
+home .home-welcome {
+	font-size: x-large;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+

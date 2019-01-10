@@ -1,0 +1,18 @@
+blog-entry {
+	display: grid;
+    grid-template-columns: auto auto;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--primary1);
+}
+
+.blog-entry-title {
+}
+
+.blog-entry-date {
+}
+
+.blog-entry-subject {
+	grid-column: span 2;
+}
