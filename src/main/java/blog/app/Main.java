@@ -1,8 +1,11 @@
 package blog.app;
 
+import static java.lang.String.format;
+import static java.util.stream.Collectors.toList;
 import static ngoy.core.Provider.useValue;
 
 import java.nio.file.Paths;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import blog.app.detail.DetailComponent;
 import blog.app.home.HomeComponent;
+import blog.app.service.BlogService;
 import ngoy.Ngoy;
 import ngoy.router.Location;
 import ngoy.router.RouterConfig;
@@ -58,6 +62,16 @@ public class Main implements InitializingBean {
 	public static void main(String[] args) {
 		Main main = new Main();
 		main.createApp();
-		main.ngoy.renderSite(Paths.get("docs"));
+
+		BlogService blogService = main.ngoy.getInjector()
+				.get(BlogService.class);
+
+		List<String> paths = blogService.getEntries()
+				.stream()
+				.map(entry -> format("/detail/%s", entry.get("id")))
+				.collect(toList());
+		paths.add("/index");
+
+		main.ngoy.renderSite(Paths.get("docs"), paths.toArray(new String[paths.size()]));
 	}
 }

@@ -1,5 +1,5 @@
 <div class="home-welcome">Hi, welcome to krizz's developer blog</div>
 
-<a *ngFor="let entry of entries" [routerLink]="'/detail/' + entry['id']">
+<a *ngFor="let entry of entries" [routerLink]="'detail/' + entry['id']">
 	<blog-entry [entry]="entry"></blog-entry>
 </a>

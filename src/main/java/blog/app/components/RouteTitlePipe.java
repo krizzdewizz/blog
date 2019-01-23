@@ -24,9 +24,12 @@ public class RouteTitlePipe implements PipeTransform {
 		if (path.equals("index")) {
 			return "Home";
 		} else if (path.startsWith("detail")) {
-			BlogEntry entry = blogService.getEntry(routeParams.get("id"));
-			if (entry != null) {
-				return entry.get("title");
+			String id = routeParams.getOrNull("id");
+			if (id != null) {
+				BlogEntry entry = blogService.getEntry(id);
+				if (entry != null) {
+					return entry.get("title");
+				}
 			}
 		}
 

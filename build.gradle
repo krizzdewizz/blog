@@ -50,3 +50,8 @@ task extractNgoy(type: Copy) {
     into "$projectDir/build/tmp/ngoy-$ngoyVersion"
     from configurations.ngoy
 }
+
+task renderSite(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'ngoyweb.app.Main'
+}
