@@ -18,7 +18,7 @@ public class DetailComponent implements OnInit {
 	public BlogEntry entry;
 
 	@Override
-	public void ngOnInit() {
+	public void onInit() {
 		entry = blogService.getEntry(routeParams.get("id"));
 	}
 }

@@ -17,7 +17,7 @@ apply plugin:'application'
 
 mainClassName = "krizz.BlogWebApplication"
 
-def ngoyVersion = '1.0.0-rc7';
+def ngoyVersion = '1.0.0-rc8';
 
 group = 'krizz'
 version = '0.0.1'
@@ -30,8 +30,8 @@ repositories {
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
-//	implementation("com.github.krizzdewizz:ngoy:$ngoyVersion")
-	//implementation("com.github.krizzdewizz.ngoy-modules:ngoy-module-markdown:1.0.1")
+	implementation("com.github.krizzdewizz:ngoy:$ngoyVersion")
+	implementation("com.github.krizzdewizz.ngoy-modules:ngoy-module-markdown:1.0.2")
 }
 
 // include component html/css files that reside next to the class

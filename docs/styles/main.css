@@ -1,0 +1,123 @@
+:root {
+	--primary1: #f8d3f1;
+	--primary2: #f4bde9;
+	--primary3: #f1a7e2;
+	--primary4: #ed91db;
+	--primary5: #ea7bd4;
+	--primary6: #e665cc;
+	--primary7: #e250c5;
+	--primary8: #df3abe;
+	--primary9: #db24b7;
+	--primary10: #c520a4;
+	--primary11: #af1d92;
+	--primary12: #ad1c91;
+	--primary13: #9a1980;
+	--primary14: #84156e;
+	--primary15: #6e125b;
+	--primary16: #580e49;
+	--primary17: #420b37;
+	--primary18: #2c0725;
+	--primary19: #160412;
+}
+
+.bg-dark {
+	background-color: var(--primary17) !important;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	margin-bottom: 50px;
+}
+
+body {
+	letter-spacing: 0.03rem;
+}
+
+p {
+	padding-top: 0.5rem;
+}
+
+
+ul {
+	list-style-position: inside;
+}
+
+pre {
+	text-align: left;
+	padding: 1rem;
+	background-color: #f6f8fa;
+	border-radius: 4px;
+	tab-size: 4;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+.app-container {
+	padding-top: 4rem;
+}
+
+code {
+	color: var(--primary14);
+}
+
+.hljs {
+	background-color: inherit;
+	padding: 0;
+}
+
+.hljs-meta {
+	font-weight: normal;
+}
+
+.hljs-string {
+	color: var(--primary11);
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+a, a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+home {
+	display: block;
+}
+
+home .home-welcome {
+	font-size: x-large;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+
+blog-entry {
+	display: grid;
+    grid-template-columns: auto auto;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--primary1);
+}
+
+.blog-entry-title {
+}
+
+.blog-entry-date {
+}
+
+.blog-entry-subject {
+	grid-column: span 2;
+}
